@@ -1,0 +1,10 @@
+<div ng-controller="sfObibaCountriesUiSelectController" schema-validate="form" sf-field-model>
+  <form-ui-select ng-if="locales && locales.length > 1"
+                  title="form.title"
+                  show-title="!form.notitle"
+                  items="data[selectedLocale]"
+                  auto-complete="form.autoComplete"
+                  sf-field-model="replaceAll"
+                  model="$$value$$"
+                  description="form.description"></form-ui-select>
+</div>

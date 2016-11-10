@@ -1,0 +1,35 @@
+{
+  "name": "sf-obiba-countries-select",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "obiba",
+  "main": [
+    "dist/sf-obiba-countries-select.js"
+  ],
+  "keywords": [
+    "angular-schema-form",
+    "schema-form",
+    "form",
+    "json",
+    "json-schema",
+    "schema"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-schema-form": "^0.8.13",
+    "angular-schema-form-bootstrap": "^0.2.0",
+    "bootstrap": "^3.3.6",
+    "angular-bootstrap": "1.3.2",
+    "ui-select": "angular-ui-select#0.16.1",
+    "ng-obiba": "git@github.com:obiba/ng-obiba.git#^1.4.2"
+  },
+  "dependencies": {
+    "obiba-country-codes": "git@github.com:obiba/obiba-country-codes.git"
+  }
+}

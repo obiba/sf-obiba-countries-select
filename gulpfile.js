@@ -36,10 +36,10 @@ gulp.task('minify', function () {
     })),
     gulp.src(files)
   )
-  .pipe(concat('sf-obiba-countries-select.js'))
+  .pipe(concat('sf-obiba-countries-ui-select.js'))
   .pipe(gulp.dest('./dist'))
   .pipe(uglify())
-  .pipe(rename('sf-obiba-countries-select.min.js'))
+  .pipe(rename('sf-obiba-countries-ui-select.min.js'))
   .pipe(gulp.dest('./dist'));
 
   return stream;

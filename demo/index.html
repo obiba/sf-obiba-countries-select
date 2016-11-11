@@ -18,7 +18,7 @@
     <script src="../bower_components/ui-select/dist/select.js"></script>
     <script src="../bower_components/ng-obiba/dist/ng-obiba.js"></script>
     <script src="../bower_components/obiba-country-codes/dist/all.js"></script>
-    <script src="../dist/sf-obiba-countries-select.js"></script>
+    <script src="../dist/sf-obiba-countries-ui-select.js"></script>
 
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../bower_components/ui-select/dist/select.css">
@@ -48,12 +48,7 @@
         $scope.form1 = [
           {
             "type":"obibaCountriesUiSelect",
-            "key":"name",
-            "autoComplete": {
-              format: ':label [:value]',
-              value: 'code',
-              label: 'name'
-            }
+            "key":"name"
           }
         ];
 
@@ -62,7 +57,7 @@
       });
 
     </script>
-    <title>Testing sf-obiba-countries-select addon</title>
+    <title>Testing sf-obiba-countries-ui-select addon</title>
   </head>
 
   <body ng-app="test">

@@ -7,10 +7,15 @@ angular.module('sfObibaCountriesUiSelect', [
   function (schemaFormProvider, schemaFormDecoratorsProvider, sfBuilderProvider, sfPathProvider) {
 
     var sfObibaCountriesUiSelect = function (name, schema, options) {
-      if (schema.type === 'array' && schema.format == 'obibaCountriesUiSelect') {
+      if (schema.type === 'array' && schema.format === 'obibaCountriesUiSelect') {
         var f = schemaFormProvider.stdFormObj(name, schema, options);
         f.key = options.path;
         f.type = 'obibaCountriesUiSelect';
+        f.autoComplete = {
+          format: ':label [:value]',
+            value: 'code',
+            label: 'name'
+        };
         options.lookup[sfPathProvider.stringify(options.path)] = f;
         return f;
       }
@@ -21,15 +26,13 @@ angular.module('sfObibaCountriesUiSelect', [
     schemaFormDecoratorsProvider.defineAddOn(
       'bootstrapDecorator',           // Name of the decorator you want to add to.
       'obibaCountriesUiSelect',                      // Form type that should render this add-on
-      'src/templates/sf-obiba-countries-select.html',  // Template name in $templateCache
+      'src/templates/sf-obiba-countries-ui-select.html',  // Template name in $templateCache
       sfBuilderProvider.stdBuilders   // List of builder functions to apply.
     );
 
   }])
-  .controller('sfObibaCountriesUiSelectController', ['$scope', 'ObibaCountriesIsoCodes', function ($scope, ObibaCountriesIsoCodes) {
-    console.log(obibaCountryCodes);
-    console.log("éééêêêêê");
-    $scope.data = obibaCountryCodes;
+  .controller('sfObibaCountriesUiSelectController', ['$scope', function ($scope) {
+    $scope.data = OBiBa.CountryCodes;
     $scope.locales = $scope.data ? Object.keys($scope.data) : [];
 
     $scope.$watch('ngModel.$modelValue', function () {

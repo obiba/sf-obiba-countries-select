@@ -1,10 +1,10 @@
 {
-  "name": "sf-obiba-countries-select",
+  "name": "sf-obiba-countries-ui-select",
   "version": "1.0.0",
   "license": "MIT",
   "author": "obiba",
   "main": [
-    "dist/sf-obiba-countries-select.js"
+    "dist/sf-obiba-countries-ui-select.js"
   ],
   "keywords": [
     "angular-schema-form",
@@ -27,9 +27,9 @@
     "bootstrap": "^3.3.6",
     "angular-bootstrap": "1.3.2",
     "ui-select": "angular-ui-select#0.16.1",
-    "ng-obiba": "git@github.com:obiba/ng-obiba.git#^1.4.2"
+    "ng-obiba": "https://github.com/obiba/ng-obiba.git#master"
   },
   "dependencies": {
-    "obiba-country-codes": "git@github.com:obiba/obiba-country-codes.git"
+    "obiba-country-codes": "https://github.com/obiba/obiba-country-codes.git"
   }
 }

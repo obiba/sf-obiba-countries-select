@@ -53,7 +53,6 @@ angular.module('sfObibaCountriesUiSelect', [
 
     $scope.$watch('form', function () {
       if ($scope.form) {
-        console.log('existingLocales',$scope.locales);
         $scope.form.disableErrorState = $scope.form.hasOwnProperty('readonly') && $scope.form.readonly;
         $scope.selectedLocale = $scope.form.locales && $scope.form.locales.length > 0 ? $scope.form.locales[0] : 'en';
       }

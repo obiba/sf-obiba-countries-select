@@ -5,6 +5,7 @@
   <form-ui-select ng-if="locales && locales.length > 1"
                   title="form.title"
                   show-title="!form.notitle"
+                  disabled="form.readonly"
                   items="data[selectedLocale]"
                   auto-complete="form.autoComplete"
                   sf-field-model="replaceAll"

@@ -11,6 +11,7 @@ angular.module('sfObibaCountriesUiSelect', [
         var f = schemaFormProvider.stdFormObj(name, schema, options);
         f.key = options.path;
         f.type = 'obibaCountriesUiSelect';
+        f.multiple = 'multiple';
         f.autoComplete = {
           format: ':label [:value]',
             value: 'code',
@@ -22,6 +23,26 @@ angular.module('sfObibaCountriesUiSelect', [
     };
 
     schemaFormProvider.defaults.array.unshift(sfObibaCountriesUiSelect);
+
+
+    var sfObibaCountriesUiSelect = function (name, schema, options) {
+
+      if (schema.type === 'string' && schema.format === 'obibaCountriesUiSelect') {
+
+        var f = schemaFormProvider.stdFormObj(name, schema, options);
+        f.key = options.path;
+        f.type = 'obibaCountriesUiSelect';
+        f.autoComplete = {
+          format: ':label [:value]',
+          value: 'code',
+          label: 'name'
+        };
+        options.lookup[sfPathProvider.stringify(options.path)] = f;
+        return f;
+      }
+    };
+
+    schemaFormProvider.defaults.string.unshift(sfObibaCountriesUiSelect);
 
     schemaFormDecoratorsProvider.defineAddOn(
       'bootstrapDecorator',           // Name of the decorator you want to add to.

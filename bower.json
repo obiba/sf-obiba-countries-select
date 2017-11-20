@@ -1,6 +1,6 @@
 {
   "name": "sf-obiba-countries-ui-select",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": "obiba",
   "main": [
@@ -27,7 +27,7 @@
     "bootstrap": "^3.3.6",
     "angular-bootstrap": "1.3.2",
     "ui-select": "angular-ui-select#0.16.1",
-    "ng-obiba": "https://github.com/obiba/ng-obiba.git#1.4.3"
+    "ng-obiba": "https://github.com/obiba/ng-obiba.git#1.5.1"
   },
   "dependencies": {
     "obiba-country-codes": "https://github.com/obiba/obiba-country-codes.git#1.0.1"

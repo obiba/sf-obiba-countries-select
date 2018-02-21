@@ -1,4 +1,4 @@
-angular.module("sfObibaCountriesUiSelectTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("src/templates/sf-obiba-countries-ui-select.html","<div\n  ng-class=\"{\'has-error\': form.disableErrorState !== true && hasError(), \'has-success\': form.disableSuccessState !== true && hasSuccess(), \'has-feedback\': form.feedback !== false }\"\n  ng-controller=\"sfObibaCountriesUiSelectController\"\n  schema-validate=\"form\" sf-field-model>\n  <form-ui-select ng-if=\"locales && locales.length > 1\"\n                  title=\"form.title\"\n                  show-title=\"!form.notitle\"\n                  disabled=\"form.readonly\"\n                  items=\"data[selectedLocale]\"\n                  auto-complete=\"form.autoComplete\"\n                  sf-field-model=\"replaceAll\"\n                  model=\"$$value$$\"\n                  multiple=\"form.multiple\"\n                  description=\"form.description\"></form-ui-select>\n</div>\n");}]);
+angular.module("sfObibaCountriesUiSelectTemplates", []).run(["$templateCache", function($templateCache) {$templateCache.put("src/templates/sf-obiba-countries-ui-select.html","<div\n  ng-class=\"{\'has-error\': form.disableErrorState !== true && hasError(), \'has-success\': form.disableSuccessState !== true && hasSuccess(), \'has-feedback\': form.feedback !== false }\"\n  ng-controller=\"sfObibaCountriesUiSelectController\"\n  schema-validate=\"form\" sf-field-model>\n  <form-ui-select ng-if=\"locales && locales.length > 1\"\n                  title=\"form.title\"\n                  show-title=\"!form.notitle\"\n                  disabled=\"form.readonly\"\n                  items=\"data[selectedLocale]\"\n                  auto-complete=\"form.autoComplete\"\n                  ng-model-options=\"{ allowInvalid: true }\"\n                  sf-field-model=\"replaceAll\"\n                  model=\"$$value$$\"\n                  multiple=\"form.multiple\"\n                  description=\"form.description\"></form-ui-select>\n</div>\n");}]);
 angular.module('sfObibaCountriesUiSelect', [
   'schemaForm',
   'ui.select',
@@ -60,8 +60,6 @@ angular.module('sfObibaCountriesUiSelect', [
     $scope.$watch('ngModel.$modelValue', function () {
       if ($scope.ngModel.$validate) {
         // Make sure that allowInvalid is always true so that the model is preserved when validation fails
-        $scope.ngModel.$options = $scope.ngModel.$options || {};
-        $scope.ngModel.$options = {allowInvalid: true};
         $scope.ngModel.$validate();
         if ($scope.ngModel.$invalid) { // The field must be made dirty so the error message is displayed
           $scope.ngModel.$dirty = true;

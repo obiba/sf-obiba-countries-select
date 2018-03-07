@@ -1,6 +1,6 @@
 {
   "name": "sf-obiba-countries-ui-select",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": "obiba",
   "main": [
@@ -25,7 +25,7 @@
     "angular-schema-form": "^0.8.13",
     "angular-schema-form-bootstrap": "^0.2.0",
     "bootstrap": "^3.3.7",
-    "angular-bootstrap": "2.5.02",
+    "angular-bootstrap": "2.5.0",
     "ui-select": "angular-ui-select#0.19.8",
     "ng-obiba": "https://github.com/obiba/ng-obiba.git#master"
   },
